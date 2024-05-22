@@ -1,0 +1,19 @@
+package test.mypac;
+
+// 가상의 옛날 가정용 전화기 객체를 생성 할 설계도라고 가정함.
+public class Phone extends Object { // extends 예약어가 없으면, 자동으로 extends object 된다. 
+	// 필드, 메소드, 생성자 
+	
+	
+	
+	// 생성자 
+	public Phone() {
+		System.out.println("Phone 생성자 호출됨");
+	}
+	
+	// 전화 거는 메소드
+	public void call() {
+		System.out.println("전화를 걸어요!");
+	}
+
+}

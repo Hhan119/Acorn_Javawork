@@ -1,0 +1,10 @@
+package test.mypac;
+
+public abstract class Depend extends MyWeapon{
+	public void depender() {
+		System.out.println("방어 명령을 진햏합니다.");
+		System.out.println("방어를 하였습니다. ");
+		
+	}
+	
+}

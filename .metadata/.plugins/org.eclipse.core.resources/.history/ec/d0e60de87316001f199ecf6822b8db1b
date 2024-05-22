@@ -1,0 +1,20 @@
+package test.main;
+
+import java.util.Scanner;
+
+import test.mypac.Phone;
+
+public class MainClass07 {
+	public static void main(String[] args) {
+		// 기본 데이터 type은 Wrapper Class type으로 간주되어서 담긴다. 
+		Object a =10; //Integer
+		Object b =true; //Boolean
+		Object c ='a'; //Character
+		
+		// 모든 참조 data type은 당연히 Object type도 된다. 
+		Object d  ="abcd";
+		Object e  =new Phone();
+		Object f  =new Scanner(System.in);
+		
+	}
+}

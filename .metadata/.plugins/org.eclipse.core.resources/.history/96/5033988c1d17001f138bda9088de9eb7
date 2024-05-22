@@ -1,0 +1,20 @@
+package test.main;
+
+import test.mypac.MyWeapon;
+import test.mypac.Weapon;
+
+public class MainClass01 {
+	public static void main(String[] args) {
+		// 추상(abstract) 클래스로 객체 생성은 되지 않는다.
+		// Weapon w1 = new Weapon();
+		
+		// 단지 data type의 역할은 할 수가 있을까?
+		Weapon w1 = null;
+		//w1.prepare(); - NullPointerException 발생(W1 안에 참조값이 없음)
+		
+		// Weapon 추상클래스를 상속받은 MyWeapon 클래스로 객체를 생성해서 Weapon type의 참조값을 얻어내기
+		MyWeapon w2 = new MyWeapon();
+		w2.attack();
+		w2.prepare();
+	}
+}

@@ -1,0 +1,10 @@
+package test.mypac;
+
+public class test {
+	public int width;
+	public int height;
+	
+	public void showArea() {
+		System.out.println("사각형 넓이는" +this.width*height +"입니다.");
+	}
+}

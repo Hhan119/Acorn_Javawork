@@ -1,0 +1,14 @@
+package test.main;
+
+public class MainClass04 {
+	
+	public static class Chelsea{
+		public void soccer() {
+			System.out.println("2024시즌 첼시는 6위를 하였습니다.");
+		}
+	}
+	public static void main(String[] args) {
+		Chelsea h = new Chelsea();
+		h.soccer();
+	}
+}

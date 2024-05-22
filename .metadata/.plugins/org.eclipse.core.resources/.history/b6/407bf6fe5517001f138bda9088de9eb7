@@ -1,0 +1,19 @@
+package main;
+
+import java.util.Scanner;
+
+public class println_step02 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in) ;
+		
+		String x = scan.next();
+		System.out.println("입력한 결과:"+ x+ "??!");
+		
+		Scanner sc = new Scanner(System.in) ;
+		int y = scan.nextInt();
+		System.out.println(y-543);
+		
+	}
+
+	
+}

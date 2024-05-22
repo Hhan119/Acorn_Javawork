@@ -1,0 +1,14 @@
+package test.main;
+
+import java.util.Random;
+
+public class MainClass05 {
+	public static void main(String[] args) {
+		Random r1 = new Random();
+		int renNum1 = r1.nextInt(10,20);
+		System.out.println(renNum1);
+		// -10 ~ 10 사이의 랜덤한 정수를 얻기보기
+		// 75 ~ 100 사이의 랜덤한 정수를 얻어보기
+		// 1 ~ 45 사이의 랜덤한 정수를 얻어보기
+	}
+}

@@ -1,0 +1,5 @@
+package test.mypac;
+
+public abstract class MyWeapon extends Weapon{
+
+}

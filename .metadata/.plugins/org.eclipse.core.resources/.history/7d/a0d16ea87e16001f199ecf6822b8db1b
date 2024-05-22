@@ -1,0 +1,12 @@
+package test.auto2;
+
+import test.auto.Car;
+import test.auto.Engine;
+
+public class Mycar extends Car{
+
+	public Mycar(Engine engine) {
+		super(engine);
+	}
+
+}

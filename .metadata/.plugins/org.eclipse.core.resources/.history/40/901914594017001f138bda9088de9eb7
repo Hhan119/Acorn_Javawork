@@ -1,0 +1,12 @@
+package test.main;
+
+import test.mypac.Remocon;
+
+public class MainClass01 {
+	public static void main(String[] args) {
+		// 인터페이스로 객체 생성이 가능할까? NO
+		Remocon r1 = new Remocon();  // 단도 객체는 생성 불가 
+		r1.up();
+		r1.down();
+	}
+}

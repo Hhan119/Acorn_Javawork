@@ -1,0 +1,20 @@
+package test.main;
+
+public class MainClass01 {
+	public static void main(String[] args) {
+		// Array 배열에서는 대괄호가 타입이 된다.
+		
+		// int type 5개를 저장하고 있는 배열 객체 생성해서 참조값을 nums라는 지역변수에 담기
+		int[] nums = {10, 20, 30, 40, 50};
+		
+		// double type 5개를 저장하고 있는 배열 객체 생성해서 참조값을 nums2라는 지역변수에 담기
+		double[] nums2 = {11, 22, 33, 44 ,55};
+		
+		// boolean 5개를 저장하고 있는 배열 객체 
+		boolean[] boo = {true, false, true, false, true};
+		
+		// String type(참조데이터 type) 5개를 저장하고 있는 배열
+		String[] names = {"첼시", "레알", "맨시티", "아스날", "뮌헨"};
+	}
+}
+

@@ -1,0 +1,17 @@
+package test.main;
+
+public class MainClass04 {
+	// static 메소드 안에서 사용하려면, static 예약어가 필요!
+	   //mainclass04
+		//Chelsea - static 예약어를 빼면 main 메소드에서 사용불가 
+		// main 
+	public static class Chelsea{
+		public void soccer() {
+			System.out.println("2024시즌 첼시는 6위를 하였습니다.");
+		}
+	}
+	public static void main(String[] args) {
+		Chelsea h = new Chelsea();
+		h.soccer();
+	}
+}

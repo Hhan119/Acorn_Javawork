@@ -1,0 +1,36 @@
+package main;
+
+import java.util.Scanner;
+
+public class println_step01 {
+	public static void main(String[] args) {
+		System.out.println("Hello world!");
+		
+		Scanner scan = new Scanner(System.in);
+		
+		//int A = scan.nextInt();
+		//int B = scan.nextInt();
+		//System.out.println(A+B);
+		
+		//int A = scan.nextInt();
+		//int B = scan.nextInt();
+		//System.out.println(A-B);
+		
+		//int A = scan.nextInt();
+		//int B = scan.nextInt();
+		//System.out.println(A*B);
+		
+		//int A = scan.nextInt();
+		//double B = scan.nextInt();
+		//System.out.println(A/B);
+		
+		int A = scan.nextInt();
+		int B = scan.nextInt();
+		System.out.println(A+B);
+		System.out.println(A-B);
+		System.out.println(A*B);
+		System.out.println(A/B);
+		System.out.println(A%B);
+	}
+}
+

@@ -1,0 +1,25 @@
+package test.main;
+
+import test.mypac.Weapon;
+
+public class MainClass06 {
+	public static void main(String[] args) {
+		// Weapon type의 참조값 얻어내기
+		Weapon w1 = new Weapon() {
+			
+			@Override
+			public void depender() {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void attack() {
+				// TODO Auto-generated method stub
+				
+			}
+		};
+
+	}
+}
+	

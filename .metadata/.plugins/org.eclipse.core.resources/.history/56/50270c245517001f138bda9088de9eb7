@@ -1,0 +1,9 @@
+package main;
+
+import java.util.Scanner;
+
+public class println_step02 {
+
+	Scanner scan = new Scanner(System.in);
+	
+}

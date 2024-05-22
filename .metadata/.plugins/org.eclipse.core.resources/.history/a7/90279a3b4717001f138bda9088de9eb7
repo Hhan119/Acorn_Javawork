@@ -1,0 +1,6 @@
+package test.mypac;
+
+//public class MyRemocon extends Remocon{
+public class MyRemocon implements Remocon{
+
+}

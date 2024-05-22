@@ -1,0 +1,17 @@
+package main;
+
+import java.util.Scanner;
+
+public class println_step01 {
+	public static void main(String[] args) {
+		System.out.println("Hello world!");
+		
+		Scanner scan = new Scanner(System.in);
+		scan.nextInt();
+		
+		int A = scan.nextInt();
+		int B = scan.nextInt();
+		
+		System.out.println(A+B);
+	}
+}

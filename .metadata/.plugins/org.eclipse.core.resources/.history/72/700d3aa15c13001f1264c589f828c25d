@@ -1,0 +1,8 @@
+package test.mypac;
+
+public class MacBook {
+	private Cpu cpu;
+	private Memory memory;
+	private HardDisk hardDisk;
+	
+}

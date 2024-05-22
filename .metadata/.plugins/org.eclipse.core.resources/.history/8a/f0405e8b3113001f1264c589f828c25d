@@ -1,0 +1,16 @@
+package test.main;
+
+import test.mypac.Test;
+
+public class MainClass01 {
+	public static void main(String[] args) {
+		Test t=new Test();
+		// return type이 void인 메소드 호출
+		t.wait();
+		// return type이 int인 메소드 호출하고 return되는 값을 a라는 int type 지역변수에 담기
+		int a=t.getNumber();
+		
+		// return type이 String인 메소드 호출하고 return되는 값을 b라는 String type 지역변수에 담기
+		String b=t.getGreeting();
+	}
+}
