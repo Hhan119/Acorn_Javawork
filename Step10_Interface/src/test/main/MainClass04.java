@@ -8,7 +8,7 @@ public class MainClass04 {
 		
 		@Override
 		public void hole() {
-			System.out.println("바다에 구멍을 뚫어요!");
+			System.out.println("바닥에 구멍을 뚫어요!");
 		}
 	});
 	
