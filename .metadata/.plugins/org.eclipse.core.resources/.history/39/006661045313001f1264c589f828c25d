@@ -1,7 +1,0 @@
-package test.mypac;
-
-public class Student {
-	public void study() {
-		System.out.println("공부해요!");
-	}
-}
