@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.PrintStream"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="test.mypac.test"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="test.mypac.Test"/>
-    <fullyQualifiedTypeName name="test.mypac.AirPlane"/>
-    <fullyQualifiedTypeName name="test.main.MainClass01"/>
-    <fullyQualifiedTypeName name="test.mypac.Student"/>
-    <fullyQualifiedTypeName name="test.mypac.Cpu"/>
     <fullyQualifiedTypeName name="test.main.MainClass03"/>
     <fullyQualifiedTypeName name="test.mypac.Memory"/>
     <fullyQualifiedTypeName name="test.mypac.HardDisk"/>
@@ -37,7 +28,6 @@
     <fullyQualifiedTypeName name="test.mypac.Remocon"/>
     <fullyQualifiedTypeName name="test.mypac.MyRemocon"/>
     <fullyQualifiedTypeName name="test.mypac.Drill"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
     <fullyQualifiedTypeName name="test.mypac.Calc"/>
     <fullyQualifiedTypeName name="test.mypac.Apple"/>
@@ -53,11 +43,21 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="test.mypac.MyUtil"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="test.mypac.WowException"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>
