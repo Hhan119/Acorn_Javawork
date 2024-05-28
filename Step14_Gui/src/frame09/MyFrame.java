@@ -3,6 +3,7 @@ package frame09;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -49,6 +50,23 @@ public class MyFrame extends JFrame {
 		newItem.addActionListener((e) ->{
 			ta.setVisible(true);	
 		});
+		
+		// 프레임 아래쪽에 버튼 추가 
+		JButton btn = new JButton("눌러");
+		add(btn, BorderLayout.SOUTH);
+		// 버튼에 액션리스너 등록 
+		btn.addActionListener((e)->{
+			System.out.println("10초 걸리는 작업을 수행중...");
+			try {
+				Thread.sleep(1000*10);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
+		
+		
+		
 		
 	}
 		
