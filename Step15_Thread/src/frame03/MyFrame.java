@@ -49,7 +49,7 @@ public class MyFrame extends JFrame implements ActionListener{
 			});
 		
 		
-			new Thread(()->{  // ()-> Runnable에 함수가 하나인 경우(run()) 줄여 쓸 수 있다. 여기서 this는 외부영역을 바라본다.
+			new Thread(()->{  // Runnable에 함수가 하나인 경우(run()) 이렇게 ()-> 줄여 쓸 수 있다. 여기서 this는 외부영역을 바라본다.
 				int count = 10;
 				// 반복문 실행
 				while(true) {
