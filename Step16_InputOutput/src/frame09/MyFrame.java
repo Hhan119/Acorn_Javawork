@@ -3,10 +3,18 @@ package frame09;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -20,7 +28,7 @@ public class MyFrame extends JFrame {
 	// 필요한 필드 선언
 	File openedFile; // 현재 열린 파일의 참조값을 저장 할 필드
 	JTextArea ta;
-	
+	JFileChooser fc;
 	// 생성자
 	public MyFrame(String title) {
 		// 부모 생성자
@@ -39,12 +47,14 @@ public class MyFrame extends JFrame {
 		saveItem.setEnabled(false);
 		JMenuItem saveAsItem = new JMenuItem("Save As");
 		saveAsItem.setEnabled(false);
+		JMenuItem delete = new JMenuItem("Delete");
 		
 		// 메뉴에 메뉴 아이템을 순서대로 추가 
 		menu.add(newItem);
 		menu.add(openItem);
 		menu.add(saveItem);
 		menu.add(saveAsItem);
+		menu.add(delete);
 		// 메뉴를 메뉴바에 추가
 		mb.add(menu);
 		// 프레임의 메소드를 이용해서 메뉴바를 추가하기
@@ -67,6 +77,11 @@ public class MyFrame extends JFrame {
 			ta.setVisible(true);
 			setTitle("제목 없음");
 			saveAsItem.setEnabled(true);
+		});
+		
+		// Delete를 눌렀을 때 실행 할 리스너 등록
+		delete.addActionListener((e)->{
+			ta.setVisible(false);
 		});
 		
 		// Save As를 눌렀을 때 실행할 리스너 등록 
@@ -100,14 +115,39 @@ public class MyFrame extends JFrame {
 				// TextArea를 보이게 활성화
 				ta.setVisible(true);
 				loadFromFile();
+				//saveItem , saveAsItem 을 활성화 한다 
+				saveItem.setEnabled(true);
+				saveAsItem.setEnabled(true);
 			}
+		});
+	
+		// save를 눌렀을 때 
+		saveItem.addActionListener((e)->{
+			saveToFile();
 		});
 		
 	}// 생성자
-
+	
+	
 		// 선택 된 파일로부터 문자열을 읽어와서 JTextArea에 출력하는 메소드
-		private void loadFromFile() {
-		
+		public void loadFromFile() {
+			FileReader fr = null;
+			BufferedReader br = null;
+			try {
+				// 필드에 저장되어 있는 File 객체를 이용해서 FIleReader 객체를 생성한다. 
+				fr=new FileReader(openedFile);
+				// 좀 더 편하게 문자열을 읽어들이기 위해 FileReader 객체를 BufferedReader로 포장한다.
+				br=new BufferedReader(fr);
+				while(true) {
+					String line=br.readLine();
+					if(line == null)break;
+					// JTextArea에 1줄씩 추가
+					ta.append(line+"\n");
+				}
+	
+			}catch(Exception e){
+				e.printStackTrace();
+			}	
 	}
 
 		// 현재까지 JTextArea에 입력된 문자열을 읽어와서 File에 저장하기
