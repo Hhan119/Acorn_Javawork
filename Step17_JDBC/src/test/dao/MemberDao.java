@@ -13,6 +13,8 @@ import test.util.DBConnector;
  * 	 회원 정보를 insert, update, delete, select 할 수 있는 기능을 가진 객체를 생성할 클래스 설계하기
  */
 public class MemberDao {
+	
+		
 	// 매개 변수에 전달된 MemberDto 객체에 담긴 회원 한명의 정보를 DB에 저장하는 메소드
 	public boolean insert(MemberDto dto) {
 		Connection conn = null;
@@ -172,7 +174,44 @@ public class MemberDao {
 	}
 	// 매개 변수에 전달된 번호에 해당하는 회원 한명의 정보를 Return 하는 메소드
 	public MemberDto getData(int num) {
-		return null;
+		MemberDto dto =null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = new DBConnector().getConn();
+			//실행할 select 문 구성하기 selection 인자가 있다면 미완성도 가능하다 
+			String sql = "select num, name, addr"
+					+ " from member"
+					+ " where num=?";;
+			pstmt = conn.prepareStatement(sql);
+			//select 문이 미완성이라면 여기서 완성한다.
+			pstmt.setInt(1, num);
+			//select 문 실행하고 결과를 ResultSet 객체로 받아온다.
+			rs = pstmt.executeQuery();
+			//select 된 row 가 여러개라면 반복문 돌면서 추출한다.
+			if (rs.next()) {
+				// MemberDto 객체를 생성
+				dto = new MemberDto();
+				dto.setNum(rs.getInt("num"));
+				dto.setName(rs.getString("name"));
+				dto.setAddr(rs.getString("addr"));
+				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		return dto;
 	}
 	
 	}
